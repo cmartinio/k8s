@@ -18,9 +18,6 @@ app.get("/nginx", async(req, res) => {
     const body = await response.txt();
     res.send(body)
 })
-
-
-
 app.listen(PORT, () => {
     console.log(`web server is listening on port ${PORT}`)
 })
