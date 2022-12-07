@@ -15,7 +15,7 @@ kind: Deployment
 metadata:
   name: nginx
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: nginx
@@ -26,10 +26,10 @@ spec:
     spec:
       containers:
       - name: k8s-web-hello
-        image: fxgx998/nginx
+        image: nginx
         resources:
           limits:
             memory: "128Mi"
             cpu: "250m"
         ports:
-        - containerPort: 3000
+        - containerPort: 80
