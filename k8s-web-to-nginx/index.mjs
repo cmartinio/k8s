@@ -12,6 +12,13 @@ app.get("/", (req, res) => {
 
 })
 
+app.get("/nginx", async(req, res) => {
+    const url = 'http://nginx'
+    const response = await fetch(url);
+    const body = await response.txt();
+    res.send(body)
+})
+
 
 
 app.listen(PORT, () => {
